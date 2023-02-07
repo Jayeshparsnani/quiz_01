@@ -147,8 +147,3 @@ def home():
 if __name__ == '__main__':
     app.run(debug=True)
 
-
-#References used:
-# 1. To connect to database: https://www.digitalocean.com/community/tutorials/how-to-use-an-sqlite-database-in-a-flask-application
-# 2. Insert image in blob file: https://stackoverflow.com/questions/14704559/how-to-insert-image-in-mysql-databasetable
-# 3. To upload image: https://flask-uploads.readthedocs.io/en/latest/  ,https://medium.com/@dustindavignon/upload-multiple-images-with-python-flask-and-flask-dropzone-d5b821829b1d
