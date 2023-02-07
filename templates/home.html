@@ -18,13 +18,15 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Jayesh Parsnani</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">1001964955</a>
-            </li>
           </ul>
-          <h5 style="margin-left:120px;">Assignment_01</h5>
+          <h5 style="margin-left:120px;">Quiz_01
+          </h5>
         </div>
     </nav>
+    <div style="margin-left:600px";>
+        <h2><a class="nav-link" href="#">4955</a></h2>
+        <img width="200" height="200" src="static/images/m-1.jpg" ></td>
+    </div>
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             <ul class=flashes>
@@ -48,55 +50,22 @@
             </form>
         </div>
         <div style="margin-top:50px;">
-            <h4>1. Enter Name to display picture</h4>
-            <form action="/searchname" method="post" enctype="multipart/form-data">
-                <label>Enter Name:</label>
-                <input type="text" name="name" required/>
-                <input type="submit" />
-            </form>
-            <br>
-            <h4>2. Display all pictures where salary is less than 99000</h4>
-            <form action="/getImgRecLess90000" method="post" enctype="multipart/form-data">
+            <h4>1. Display all pictures</h4>
+            <form action="/nameimage" method="post" enctype="multipart/form-data">
                 <label>Hit submit to get.</label>
                 <input type="submit" />
             </form>
             <br>
-            <h4>3. Enter Name to add picture (Need help for this)</h4>
-            <form action="/addpicture" method="post" enctype="multipart/form-data">
+            <h4>2. Enter Name and write new comment to modify</h4>
+            <form action="/changecomment" method="post" enctype="multipart/form-data">
                 <label>Enter Name:</label>
                 <input type="text" name="name" required/>
-                <br>
-                <br>
-                <label>Upload Picture:</label>
-                <input type="file" name="image" required/>
+                <label>Enter Comment:</label>
+                <input type="text" name="comment" required/>
+                <label>Enter Income:</label>
+                <input type="text" name="income" required/>
                 <input type="submit" />
             </form>
-            <br>
-            <h4>4. Enter Name to delete</h4>
-            <form action="/deleteuser" method="post" enctype="multipart/form-data">
-                <label>Enter Name:</label>
-                <input type="text" name="delete_user" required/>
-                <input type="submit" />
-            </form>
-            <br>
-            <h4>5. Enter Name and write new key-word</h4>
-            <form action="/changekeyword" method="post" enctype="multipart/form-data">
-                <label>Enter Name:</label>
-                <input type="text" name="name" required/>
-                <label>Enter Keyword:</label>
-                <input type="text" name="keyword" required/>
-                <input type="submit" />
-            </form>
-            <br>
-            <h4>6. Enter Name to Change Salary</h4>
-            <form action="/changesalary" method="post" enctype="multipart/form-data">
-                <label>Enter Name:</label>
-                <input type="text" name="name" required/>
-                <label>Enter Salary:</label>
-                <input type="text" name="salary" required/>
-                <input type="submit" />
-            </form>
-            <br>
         </div>
         
     </div>

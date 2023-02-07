@@ -20,34 +20,21 @@
               <a class="nav-link" href="#">Jayesh Parsnani</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">1001964955</a>
+              <a class="nav-link" href="#">4955</a>
             </li>
           </ul>
         </div>
     </nav>
 <br>
 <h3>{{ rows }}</h3>
-{% if unique == "displayimg"%}
-<table border=4>
-  <thead>
-  <td>Image</td>
-  </thead>
-    <tr>
-        <img width="500" height="600" src="{{ image }}" alt="User Image" >
-    </tr>
-</table>
-{% endif %}
 {% if unique == "displayrecords" %}
   <table border=4>
     <thead>
     <td>Name</td>
-    <td>State</td>
-    <td>Salary</td>
-    <td>Grade</td>
-    <td>Room</td>
-    <td>TelNum</td>
+    <td>Income</td>
+    <td>Class</td>
     <td>Picture</td>
-    <td>Keywords</td>
+    <td>Comments</td>
     </thead>
 
     {% for row in msg %}
@@ -57,14 +44,11 @@
             <td>{{ row[2] }}</td>
             <td>{{ row[3] }}</td>
             <td>{{ row[4] }}</td>
-            <td>{{ row[5] }}</td>
-            <td>{{ row[6] }}</td>
-            <td>{{ row[7] }}</td>
         </tr>
     {% endfor %}
   </table>
 {% endif %}
-{% if unique == "salary99000" %}
+{% if unique == "nameimagepic" %}
     {% for row in msg %}
     <table border=4>
       <thead>
@@ -72,20 +56,7 @@
       </thead>
         <tr>
             <td>{{ row[0] }}</td>
-            <td><img width="500" height="600" src="static/images/{{ row[6] }}" alt="User has no image in database but it's salary is less than 99000" ></td>
-        </tr>
-    </table>
-    {% endfor %}
-{% endif %}
-{% if unique == "displayname" %}
-    {% for row in msg %}
-    <table border=4>
-      <thead>
-      <td>Image</td>
-      </thead>
-        <tr>
-            <td>{{ row[0] }}</td>
-            <td><img width="500" height="600" src="static/images/{{ row[6] }}" alt="User has no image in database." ></td>
+            <td><img width="500" height="600" src="static/images/{{ row[3] }}" alt="User has no image in database" ></td>
         </tr>
     </table>
     {% endfor %}
